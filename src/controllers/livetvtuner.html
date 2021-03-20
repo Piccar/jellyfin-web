@@ -33,6 +33,16 @@
                     <div class="fieldDescription">${UserAgentHelp}</div>
                 </div>
 
+                <div class="inputContainer fldUserName hide">
+                    <input is="emby-input" type="text" class="txtUserName" label="${LabelUsername}" autocomplete="off" />
+                    <div class="fieldDescription">${TunerUserNameHelp}</div>
+                </div>
+
+                <div class="inputContainer fldPassword hide">
+                    <input is="emby-input" type="password" class="txtPassword" label="${LabelPassword}" autocomplete="off" />
+                    <div class="fieldDescription">${TunerPasswordHelp}</div>
+                </div>
+
                 <div class="inputContainer fldTunerCount hide">
                     <input is="emby-input" type="number" pattern="[0-9]*" required="required" min="0" step="1" class="txtTunerCount" label="${LabelSimultaneousConnectionLimit}" autocomplete="off" value="0" />
                     <div class="fieldDescription">${SimultaneousConnectionLimitHelp}</div>
