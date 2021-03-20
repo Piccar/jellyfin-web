@@ -1466,6 +1466,8 @@
     "Trailers": "Trailers",
     "Transcoding": "Transcoding",
     "Tuesday": "Tuesday",
+    "TunerPasswordHelp": "If a username was set, put the corresponding password here.",
+    "TunerUserNameHelp": "Optional: If the stream requires HTTP basic authentication, supply the username here.",
     "TV": "TV",
     "TvLibraryHelp": "Review the {0}TV naming guide{1}.",
     "TypeOptionPluralAudio": "Audios",

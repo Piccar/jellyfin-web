@@ -56,6 +56,8 @@ function fillTunerHostInfo(view, info) {
     view.querySelector('.txtDevicePath').value = info.Url || '';
     view.querySelector('.txtFriendlyName').value = info.FriendlyName || '';
     view.querySelector('.txtUserAgent').value = info.UserAgent || '';
+    view.querySelector('.txtUserName').value = info.UserName || '';
+    view.querySelector('.txtPassword').value = info.Password || '';
     view.querySelector('.fldDeviceId').value = info.DeviceId || '';
     view.querySelector('.chkFavorite').checked = info.ImportFavoritesOnly;
     view.querySelector('.chkTranscode').checked = info.AllowHWTranscoding;
@@ -69,6 +71,8 @@ function submitForm(page) {
         Type: page.querySelector('.selectType').value,
         Url: page.querySelector('.txtDevicePath').value || null,
         UserAgent: page.querySelector('.txtUserAgent').value || null,
+        UserName: page.querySelector('.txtUserName').value || null,
+        Password: page.querySelector('.txtPassword').value || null,
         FriendlyName: page.querySelector('.txtFriendlyName').value || null,
         DeviceId: page.querySelector('.fldDeviceId').value || null,
         TunerCount: page.querySelector('.txtTunerCount').value || 0,
@@ -121,6 +125,7 @@ function onTypeChange() {
     const supportsStreamLooping = value === 'm3u';
     const supportsTunerCount = value === 'm3u';
     const supportsUserAgent = value === 'm3u';
+    const supportsUserNameAndPassword = value === 'm3u';
     const suppportsSubmit = value !== 'other';
     const supportsSelectablePath = supportsTunerFileOrUrl;
     const txtDevicePath = view.querySelector('.txtDevicePath');
@@ -147,6 +152,14 @@ function onTypeChange() {
         view.querySelector('.fldUserAgent').classList.remove('hide');
     } else {
         view.querySelector('.fldUserAgent').classList.add('hide');
+    }
+
+    if (supportsUserNameAndPassword) {
+        view.querySelector('.fldUserName').classList.remove('hide');
+        view.querySelector('.fldPassword').classList.remove('hide');
+    } else {
+        view.querySelector('.fldUserName').classList.add('hide');
+        view.querySelector('.fldPassword').classList.add('hide');
     }
 
     if (supportsFavorites) {
