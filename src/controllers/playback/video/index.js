@@ -86,6 +86,25 @@ import { appRouter } from '../../../components/appRouter';
 
             setTitle(displayItem, parentName);
 
+            const mediaInfoHtml = mediaInfo.getPrimaryMediaInfoHtml(displayItem, {
+                runtime: false,
+                subtitles: false,
+                tomatoes: false,
+                endsAt: false,
+                episodeTitle: false,
+                originalAirDate: displayItem.Type !== 'Program',
+                episodeTitleIndexNumber: displayItem.Type !== 'Program',
+                programIndicator: false
+            });
+            const osdMediaInfo = view.querySelector('.osdMediaInfo');
+            osdMediaInfo.innerHTML = mediaInfoHtml;
+
+            if (mediaInfoHtml) {
+                osdMediaInfo.classList.remove('hide');
+            } else {
+                osdMediaInfo.classList.add('hide');
+            }
+
             const secondaryMediaInfo = view.querySelector('.osdSecondaryMediaInfo');
             const secondaryMediaInfoHtml = mediaInfo.getSecondaryMediaInfoHtml(displayItem, {
                 startDate: false,
