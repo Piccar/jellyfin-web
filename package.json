@@ -46,7 +46,7 @@
     "webpack-dev-server": "^3.11.0",
     "webpack-merge": "^4.2.2",
     "workbox-webpack-plugin": "^6.1.5",
-    "worker-plugin": "^5.0.0"
+    "worker-plugin": "^5.0.1"
   },
   "dependencies": {
     "blurhash": "^1.1.3",
