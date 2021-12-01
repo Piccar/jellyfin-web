@@ -234,7 +234,8 @@ import cardBuilder from '../../../components/cardbuilder/cardBuilder';
             return false;
         });
         view.querySelector('.btnForgotPassword').addEventListener('click', function () {
-            Dashboard.navigate('forgotpassword.html');
+            // Dashboard.navigate('forgotpassword.html');
+            window.open("https://accounts.germancoding.com/resetpassword");
         });
         view.querySelector('.btnCancel').addEventListener('click', showVisualForm);
         view.querySelector('.btnQuick').addEventListener('click', function () {
