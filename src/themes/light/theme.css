@@ -270,10 +270,6 @@ html {
 }
 
 .listItem:hover{
-    background: #10223e;
-}
-
-.listItem:hover{
     background: #f2f2f2;
 }
 
