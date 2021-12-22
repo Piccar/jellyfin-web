@@ -269,6 +269,10 @@ html {
     background: #ddd;
 }
 
+.listItem:hover{
+    background: #f2f2f2;
+}
+
 .progressring-spiner {
     border-color: #00a4dc;
 }
