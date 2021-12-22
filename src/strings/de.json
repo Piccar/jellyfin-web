@@ -1408,7 +1408,7 @@
     "QuickConnectDeactivated": "Schnellverbindung war deaktiviert bevor der Login verifiziert werden konnte",
     "QuickConnectAuthorizeFail": "Unbekannter Schnellverbindungs-Code",
     "QuickConnectAuthorizeSuccess": "Anfrage autorisiert",
-    "QuickConnectAuthorizeCode": "Gib zum Login den Code {0} ein",
+    "QuickConnectAuthorizeCode": "Gib zum Login den Code {0} ein. Das Feature muss auf dem Server aktiviert worden sein.",
     "QuickConnectActivationSuccessful": "Erfolgreich aktiviert",
     "EnableQuickConnect": "Schnellverbindung auf diesem Server aktivieren",
     "QuickConnect": "Schnellverbindung",
